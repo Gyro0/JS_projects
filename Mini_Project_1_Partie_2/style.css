@@ -1,0 +1,140 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+.container {
+    max-width: 600px;
+    margin-top: 20px;
+  }
+  
+#configContainer {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+#configForm {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+  }
+  
+#configForm label {
+    margin-top: 10px;
+    font-weight: bold;
+  }
+  
+#configForm input,
+#configForm select {
+    margin-bottom: 10px;
+    padding: 5px;
+  }
+  
+#configForm button {
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+.score_Container {
+    display: none;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 10px 20px;
+    text-align: center;
+    background-color: #007bff;
+    color: white;
+    justify-content: center;
+    align-items: center;
+  }
+  
+.qcm_container {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    justify-content: center;
+    align-items: center;
+    display: none;
+    flex-direction: column;
+  }
+  
+.question-block {
+    width: 60%;
+    margin-bottom: 30px;
+  }
+  
+.question-block p {
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+.choices {
+    margin-bottom: 10px;
+  }
+  
+.choices label {
+    display: block;
+    background: #f8f8f8;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+.choices label:hover {
+    background: #e0e0e0;
+  }
+  
+.next-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: background 0.3s ease;
+  }
+  
+.next-button:hover {
+    background-color: #0056b3;
+  }
+  
+.timer {
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 15px;
+    color: #d9534f;
+  }
+  
+.blurred {
+    filter: blur(2px);
+    opacity: 0.5;
+  }
+  
+.final-score {
+    font-weight: bold;
+    font-size: 18px;
+    text-align: center;
+    margin-top: 20px;
+  }
+  
