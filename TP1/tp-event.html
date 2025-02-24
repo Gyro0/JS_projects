@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8" />
+<title>Manipulation de vue</title>
+<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+<style>
+#counter{
+	display: flex;
+	flex-direction: row;
+	gap: 10px;
+}
+#counter button{
+	width: 50px;
+	height: 40px;
+}
+.shown{
+	color: red;
+	display: block;
+}
+</style>
+</head>
+<body>
+
+<div id="monapp">
+	<button @click="changeTitle">{{title}}</button>
+	<div><br></div>
+	<div id="counter">
+		<button @click="incrementer">++</button>
+		<p>{{count}}</p>
+		<button @click="decrementer">--</button>
+	</div>
+	<div><br></div>
+	<div id="noSpace">
+		<input type="text" :value="texte" @input="verifier">
+		<p v-if="errorMsg" :class={shown:isError} id="errorMsg">{{errorMsg}}</p>
+	</div>
+</div>
+
+
+<script>
+	const appli = {
+		data () {
+				return {
+					//exo1
+					title:"Cliquez Moi!",
+					//exo2
+					count:0,
+					//exo3
+					texte:"",
+					errorMsg: "",
+					isError:false,
+				}
+			},
+			methods:{
+					//exo1
+				changeTitle(){
+					this.title = "Cliqué!";
+				},
+					//exo2
+				incrementer(){
+					this.count++;
+				},
+				decrementer(){
+					this.count--;
+				},
+					//exo3
+				verifier(e){
+					if (e.target.value.includes(" ")){
+						this.errorMsg="Les espaces ne sont pas autorisés !";
+						e.target.value=this.texte;
+						this.isError=true;
+					}
+					else{
+						this.errorMsg="";
+						this.texte=e.target.value;
+						this.isError=false;
+					}
+				}
+
+
+			}
+	};
+	
+Vue.createApp(appli).mount("#monapp");
+</script>
+
+</body>
+</html>
