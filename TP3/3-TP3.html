@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <style>
+        body{
+            display: flex;
+            background-color: gray;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(to right, #333, #555);
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+
+
+        }
+        .Container{
+            border-radius: 30px ;
+            text-align: center;
+            gap:10px;
+            background-color: gainsboro;
+            width: 700px;
+            padding: 40px;
+            box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+
+        }
+        h2{
+            font-size: 2.5rem;
+            color: #222;
+            margin-bottom: 20px;
+        }
+        .total {
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-bottom: 20px;
+          }
+        .filter{
+            display:flex;
+            justify-content: center;
+            gap:10px;
+            margin-bottom: 20px;
+
+        }
+        .tasksContainer{
+            background: #e0e0e0;
+            padding: 30px;
+            display:flex;
+            flex-direction: column;
+            gap: 30px;
+            box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+
+     border-radius: 20px;
+
+        }
+        .active-filter{
+            background-color: antiquewhite;
+        }
+        .tasks{
+            border-radius: 6px;
+            background: #ffffff;
+            padding: 10px;
+            box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.15);
+            text-align: left;
+            transition: transform 0.3s ease-in-out;
+        }
+        .tasks:hover {
+            transform: scale(1.02);
+          }
+        #taskTitle{
+            font-weight: bold;
+            font-size: 1.1rem;
+            margin-bottom: 4px;
+                }
+        #taskDescription{
+            font-size: 0.9rem;
+            color: #666;            
+            margin-bottom: 4px;
+        }
+        #taskCompleted{
+            font-size: 75%;
+            color: green;
+        }
+        button{
+            background: #e0e0e0;
+            padding:8px 10px;
+            border-radius: 10px;
+            border: none;
+            box-shadow: 1px 1px 5px ; 
+            cursor: pointer;
+
+
+        }
+        button:hover{
+            background: #d6d6d6;
+            cursor: pointer;
+            transform: scale(1.05);
+
+        }
+        .active-filter{
+            background: #ffcc80;
+            color: #333;
+            font-weight: 600;
+            }
+        .active-filter:hover{
+            background: #ffb74d;
+            cursor: pointer;
+        }
+        #completedBtn{
+            background: #4caf50;
+            padding:5px;
+            color: white;
+
+            border-radius: 10px;
+            border:0px;
+            box-shadow: 1px 1px 5px ; 
+            font-size: 60%;
+        }
+        #completedBtn:hover{
+            background: #388e3c;  
+            color: white;
+            transition: background 0.3s;
+            cursor: pointer;
+
+        }
+    </style>
+</head>
+<body>
+
+    <div class="Container">
+        <h2>Task List</h2>
+        <div class="total">Total Tasks : {{totalTasks}}</div>
+        <div class="filter">
+            <button @click="filter='completed'" :class="{ 'active-filter': filter === 'completed' }">Show Completed</button>
+            <button @click="filter='uncompleted'" :class="{ 'active-filter': filter === 'uncompleted' }">Show Uncompleted</button>
+            <button @click="filter='all'" :class="{ 'active-filter': filter === 'all' }">Show All</button>
+
+        </div>
+        <div class="tasksContainer">
+        <div class="tasks" v-for="task in filteredTasks" :key="task.id">
+            <div id="taskTitle">{{task.title}}</div>
+            <div id="taskDescription">{{task.description}}</div>
+            <div v-if="task.completed" id="taskCompleted">Completed</div>
+            <button id="completedBtn" v-if="!task.completed" @click="markAsCompleted(task)">Mark As Completed</button>
+        </div>
+        </div>
+    </div>
+
+    <script>
+        const app = Vue.createApp({
+            data() {
+                return {
+                    taskList: [],
+                    show_completed:true,
+                    show_uncompleted:true,
+                    filter:"all",
+
+                };
+            },
+            computed:{
+                filteredTasks(){
+                    if (this.filter=="completed"){
+                        return this.taskList.filter(task => task.completed==true)
+                    }
+                    else if(this.filter=="uncompleted"){
+                        return this.taskList.filter(task => task.completed==false)
+                    }
+                    else{
+                        return this.taskList
+                    }
+                },
+                totalTasks(){
+                    return this.taskList.length
+                }
+
+            },
+            methods: {
+                markAsCompleted(e){
+                    e.completed=true;
+                    this.taskList = [...this.taskList];
+                }
+            },
+            created() {
+                fetch('taskList.json')
+                    .then(response => response.json())
+                    .then(data => {
+                        this.taskList = data;
+                    });
+            }
+        });
+        
+        app.mount('body');
+    </script>
+</body>
+</html>
