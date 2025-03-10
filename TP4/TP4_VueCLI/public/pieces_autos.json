@@ -1,0 +1,82 @@
+[
+  {
+    "id": 1,
+    "nom": "Batterie 12V",
+    "prix": 120,
+    "categorie": "Électricité",
+    "disponible": true,
+    "image": "images/1.png"
+  },
+  {
+    "id": 2,
+    "nom": "Filtre à huile",
+    "prix": 15,
+    "categorie": "Filtration",
+    "disponible": true,
+    "image": "images/2.png"
+  },
+  {
+    "id": 3,
+    "nom": "Bougies d'allumage (x4)",
+    "prix": 35,
+    "categorie": "Moteur",
+    "disponible": false,
+    "image": "images/3.png"
+  },
+  {
+    "id": 4,
+    "nom": "Disques de frein (x2)",
+    "prix": 80,
+    "categorie": "Freinage",
+    "disponible": true,
+    "image": "images/4.png"
+  },
+  {
+    "id": 5,
+    "nom": "Courroie de distribution",
+    "prix": 90,
+    "categorie": "Moteur",
+    "disponible": false,
+    "image": "images/5.png"
+  },
+  {
+    "id": 6,
+    "nom": "Pompe à eau",
+    "prix": 70,
+    "categorie": "Refroidissement",
+    "disponible": true,
+    "image": "images/6.png"
+  },
+  {
+    "id": 7,
+    "nom": "Amortisseurs arrière (x2)",
+    "prix": 150,
+    "categorie": "Suspension",
+    "disponible": true,
+    "image": "images/7.png"
+  },
+  {
+    "id": 8,
+    "nom": "Filtre à air",
+    "prix": 20,
+    "categorie": "Filtration",
+    "disponible": true,
+    "image": "images/8.png"
+  },
+  {
+    "id": 9,
+    "nom": "Capteur ABS",
+    "prix": 50,
+    "categorie": "Sécurité",
+    "disponible": false,
+    "image": "images/9.png"
+  },
+  {
+    "id": 10,
+    "nom": "Radiateur de refroidissement",
+    "prix": 130,
+    "categorie": "Refroidissement",
+    "disponible": true,
+    "image": "images/10.png"
+  }
+]
