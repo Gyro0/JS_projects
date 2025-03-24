@@ -1,0 +1,82 @@
+[
+  {
+    "id": 1,
+    "titre": "Développeur Web",
+    "description": "Conception et développement d'applications web en utilisant des technologies modernes telles que HTML, CSS, JavaScript et des frameworks comme React.",
+    "salaire": 35000,
+    "date_creation": "2025-03-15",
+    "annee_experience": 2
+  },
+  {
+    "id": 2,
+    "titre": "Ingénieur Logiciel",
+    "description": "Conception, développement et maintenance de logiciels, en participant à toutes les phases du cycle de vie du projet.",
+    "salaire": 50000,
+    "date_creation": "2025-03-10",
+    "annee_experience": 5
+  },
+  {
+    "id": 3,
+    "titre": "Data Analyst",
+    "description": "Analyse des données, création de rapports et visualisation des informations afin d'aider à la prise de décision stratégique.",
+    "salaire": 40000,
+    "date_creation": "2025-03-12",
+    "annee_experience": 3
+  },
+  {
+    "id": 4,
+    "titre": "Chef de Projet IT",
+    "description": "Coordination des équipes de développement, gestion des plannings et suivi des budgets pour garantir la réussite des projets informatiques.",
+    "salaire": 60000,
+    "date_creation": "2025-03-08",
+    "annee_experience": 7
+  },
+  {
+    "id": 5,
+    "titre": "Administrateur Systèmes et Réseaux",
+    "description": "Gestion et maintenance des infrastructures informatiques, administration des serveurs et optimisation des performances réseau.",
+    "salaire": 45000,
+    "date_creation": "2025-03-14",
+    "annee_experience": 4
+  },
+  {
+    "id": 6,
+    "titre": "Développeur Mobile",
+    "description": "Développement d'applications mobiles pour iOS et Android en utilisant des frameworks comme Flutter et React Native.",
+    "salaire": 38000,
+    "date_creation": "2025-03-13",
+    "annee_experience": 2
+  },
+  {
+    "id": 7,
+    "titre": "Expert en Cybersécurité",
+    "description": "Mise en place de stratégies de cybersécurité, analyse des vulnérabilités et protection des systèmes contre les cyberattaques.",
+    "salaire": 65000,
+    "date_creation": "2025-03-07",
+    "annee_experience": 6
+  },
+  {
+    "id": 8,
+    "titre": "Architecte Cloud",
+    "description": "Conception et gestion des infrastructures cloud, optimisation des performances et sécurisation des environnements cloud.",
+    "salaire": 70000,
+    "date_creation": "2025-03-06",
+    "annee_experience": 8
+  },
+  {
+    "id": 9,
+    "titre": "Ingénieur DevOps",
+    "description": "Automatisation des processus de développement et de déploiement, gestion des outils CI/CD et optimisation des workflows.",
+    "salaire": 55000,
+    "date_creation": "2025-03-09",
+    "annee_experience": 5
+  },
+  {
+    "id": 10,
+    "titre": "Consultant BI (Business Intelligence)",
+    "description": "Analyse des données, création de tableaux de bord interactifs et amélioration des processus de reporting décisionnel.",
+    "salaire": 48000,
+    "date_creation": "2025-03-11",
+    "annee_experience": 4
+  }
+]

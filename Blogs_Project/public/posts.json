@@ -1,0 +1,25 @@
+[{
+        "id": 1,
+        "title": "Introduction à Vue.js",
+        "body": "Vue.js est un framework JavaScript progressif utilisé pour construire des interfaces utilisateur. Il est simple et efficace pour développer des applications dynamiques et réactives.",
+        "tags": ["vue", "javascript", "frontend"]
+    },
+    {
+        "id": 2,
+        "title": "Les bases de la programmation orientée objet",
+        "body": "La programmation orientée objet repose sur des concepts tels que l'encapsulation, l'héritage et le polymorphisme. Ces concepts permettent une structuration claire et maintenable du code.",
+        "tags": ["programmation", "POO", "algorithmes"]
+    },
+    {
+        "id": 3,
+        "title": "Comprendre les algorithmes de tri",
+        "body": "Les algorithmes de tri sont fondamentaux en informatique. Ils permettent d'organiser et de traiter efficacement des ensembles de données, et jouent un rôle crucial dans l'optimisation des performances.",
+        "tags": ["algorithmes", "tri", "informatique"]
+    },
+    {
+        "id": 4,
+        "title": "Introduction aux bases de données NoSQL",
+        "body": "Les bases de données NoSQL offrent une alternative aux systèmes relationnels traditionnels. Elles se distinguent par leur flexibilité et leur capacité à gérer des volumes importants de données de manière scalable.",
+        "tags": ["NoSQL", "bases de données", "backend"]
+    }
+]
